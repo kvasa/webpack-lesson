@@ -1,10 +1,11 @@
-function component() {
-  const element = document.createElement('h1');
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-  // Lodash, currently included via a script, is required for this line to work
-  element.innerHTML = _.join(['Hello', 'webpack'], ' ');
+import Logo from './logo.png';
+import './style.css';
 
-  return element;
+const App = () => {
+  return <h1>Hello from React 123. <img src={Logo} /></h1>
 }
 
-document.body.appendChild(component());
+ReactDOM.render(<App />, document.getElementById('root'));
